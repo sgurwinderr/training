@@ -1,8 +1,64 @@
 class source{
 	public static void main(String[] argv){
-
+				
 	}
 
+
+	//Linked list creation, insertion, display  - list class
+	public static void linked_list(){
+		list head=new list();
+		head.data=5;
+		insert_node(head,35);
+		insert_node(head,3);
+		list_display(head);
+	}
+	public static void insert_node(list head,int data){
+		list ptr=head;
+		if(ptr!=null){
+			while(ptr.next!=null){
+				ptr=ptr.next;
+			}
+		}
+		ptr.next=new list();
+		ptr.next.data=data;
+	}
+	public static void list_display(list head){
+		list ptr=head;
+		while(ptr!=null){
+			System.out.println(ptr.data);
+			ptr=ptr.next;
+		}
+	}
+
+
+	//Queue and circular queue implementaion - Queue class	
+	public static void queueop(){
+		queue obj=new queue();
+		obj.insert(4);
+		obj.insert(2);
+		obj.insert(45);
+		obj.insert(62);
+		obj.insert(84);
+		obj.insert(24);
+		obj.delete();
+		obj.delete();
+		obj.delete();
+		obj.delete();
+		obj.delete();
+		obj.delete();
+		obj.delete();
+	}
+
+	//Operation on Stack on Stack class
+	public static void stackop(){
+		stack obj=new stack();
+		obj.push(1);
+		obj.push(4);
+		obj.pop();
+		obj.push(3);
+		obj.push(5);
+		obj.push(10);
+	}
 	
 	//Cust Class - interaction... this method...parameter vs reference
 	public static void customer(){
