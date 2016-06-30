@@ -1,8 +1,58 @@
 class source{
 	public static void main(String[] argv){
-				
+		System.out.println(argv[0]);	
+		int i=Integer.parseInt(argv[0]);
+		System.out.println(i);	
+	}
+	
+
+	//Constructor using Cust class
+	public static void constr(){
+		cust obj1=new cust();
+		System.out.println(obj1.getdata());
+		System.out.println(obj1.getcustName());
+		cust obj2=new cust();
+		cust obj3=new cust();
+		System.out.println(obj2.getdata());
+		System.out.println(obj2.getcustName());
+		System.out.println(obj3.getdata());
+		System.out.println(obj3.getcustName());
+		System.out.println(obj1.gettotal());
 	}
 
+
+	//String implementation Assignment
+	public static void strop(){
+		String str1=new String("Hello");
+		String str2=new String("Hello");
+		System.out.println(str1==str2);
+		System.out.println(str1.equals(str2));
+		
+		str1.toUpperCase();
+		String str3=str1;
+		System.out.println(str3==str2);
+		System.out.println(str3.equalsIgnoreCase(str2));
+
+		System.out.println(str3.concat(str2));
+
+		str2="";
+		for(int i=str1.length()-1;i>=0;i--){
+			str2=str2+str1.charAt(i);
+		}
+		System.out.println(str2);	
+	}
+
+	//String implementaion in Cust class
+	public static void custstr(){
+		cust obj=new cust();
+		obj.setcustName("Abcd");
+		if(obj.validateName()){
+			System.out.println(obj.getcustName());
+		}
+		else{
+			System.out.println("Re-enter Name");
+		}
+	}
 
 	//Linked list creation, insertion, display  - list class
 	public static void linked_list(){
